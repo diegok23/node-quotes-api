@@ -5,9 +5,14 @@
     "id": 0
   },
   {
-    "quote": "lalala",
-    "author": "Yo",
+    "quote": "Whatever the mind of man can conceive and believe, it can achieve.",
+    "author": "Napoleon Hill",
     "id": 1
+  },
+  {
+    "quote": "Strive not to be a success, but rather to be of value.",
+    "author": "Albert Einstein",
+    "id": 2
   },
   {
     "quote": "Two roads diverged in a wood, and I—I took the one less traveled by, And that has made all the difference.",
@@ -505,13 +510,23 @@
     "id": 101
   },
   {
-    "quote": "Hola1",
-    "author": "Yo",
+    "author": "Diego",
+    "quote": "First message",
+    "id": 102
+  },
+  {
+    "author": "Diego",
+    "quote": "2nd message",
     "id": 103
   },
   {
-    "quote": "Hola1",
-    "author": "Yo",
-    "id": 103
+    "author": "Diego",
+    "quote": "3rd message",
+    "id": 104
+  },
+  {
+    "author": "Diego",
+    "quote": "Modified message",
+    "id": 105
   }
 ]
