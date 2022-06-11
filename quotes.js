@@ -1,16 +1,18 @@
 const fs = require('fs');
-const file = 'quotes.json';
 
-function getQuotesFile() {
-  const text = fs.readFileSync(file);
-  return JSON.parse(text);
-}
+function getDatabase(deps) {
+  function getQuotesFile() {
+    const text = fs.readFileSync(deps.file);
+    return JSON.parse(text);
+  }
 
-function saveQuotesToFile(arr) {
-  fs.writeFileSync(file, JSON.stringify(arr, null, 2));
-}
-
-module.exports = {
+  function saveQuotesToFile(arr) {
+    fs.writeFileSync(deps.file, JSON.stringify(arr, null, 2));
+  }
+  return {
     getQuotesFile,
-    saveQuotesToFile,
+    saveQuotesToFile
+  };
 }
+
+module.exports = getDatabase;

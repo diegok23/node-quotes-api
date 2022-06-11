@@ -1,7 +1,8 @@
-const quotes = require('./quotes');
+const getDatabase = require('./quotes');
 const getApi = require('./api');
+const file = 'quotes.json';
 const api = getApi({
-  quotes: quotes
+  quotes: getDatabase({ file })
 });
 
 // MIDDLEWARES
