@@ -14,8 +14,10 @@ function getApi(deps) {
   const postQuote = (req, res) => {
     const newQuote = req.body;
     const quotes = deps.quotes.getQuotesFile();
-    const lastQuoteId = Number(quotes[quotes.length - 1].id);
-    newQuote.id = lastQuoteId + 1;
+    //const lastQuoteId = Number(quotes[quotes.length - 1].id);
+    //newQuote.id = lastQuoteId + 1;
+    const maxQuoteId = Math.max.apply(Math, quotes.map(quote => quote.id));
+    newQuote.id = maxQuoteId + 1;
     quotes.push(newQuote);
     deps.quotes.saveQuotesToFile(quotes);
     res.send(newQuote);
@@ -25,7 +27,7 @@ function getApi(deps) {
     const modifiedQuote = req.body;
     const quotes = deps.quotes.getQuotesFile();
     const id = Number(req.params.quoteId);
-    const quote = quotes.find((quote) => quote.id === id);
+    const quote = quotes.find(quote => quote.id === id);
     if (quote) {
       quote.quote = modifiedQuote.quote;
       quote.author = modifiedQuote.author;
@@ -39,9 +41,9 @@ function getApi(deps) {
   const deleteQuote = (req, res) => {
     let quotes = deps.quotes.getQuotesFile();
     const id = Number(req.params.quoteId);
-    const deletedQuote = quotes.find((quote) => quote.id === id);
+    const deletedQuote = quotes.find(quote => quote.id === id);
     if (deletedQuote) {
-      quotes = quotes.filter((quote) => quote.id !== id);
+      quotes = quotes.filter(quote => quote.id !== id);
       deps.quotes.saveQuotesToFile(quotes);
       res.send(deletedQuote);
     } else {
