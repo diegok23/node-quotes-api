@@ -9,7 +9,10 @@
     "debug": "nodemon server.js"
   },
   "dependencies": {
-    "express": "^4.16.4"
+    "bcrypt": "^5.0.1",
+    "dotenv": "^16.0.1",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.5.1"
   },
   "repository": {
     "type": "git",

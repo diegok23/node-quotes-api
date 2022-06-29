@@ -8,10 +8,11 @@ function getDatabase(deps) {
 
   function saveQuotesToFile(arr) {
     fs.writeFileSync(deps.file, JSON.stringify(arr, null, 2));
-  }
+  }  
+
   return {
     getQuotesFile,
-    saveQuotesToFile
+    saveQuotesToFile,
   };
 }
 

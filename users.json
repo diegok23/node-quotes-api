@@ -1,0 +1,32 @@
+[
+  {
+    "userName": "John Doe",
+    "password": "1234567890",
+    "id": 1
+  },
+  {
+    "userName": "Pepi1",
+    "password": "123456789",
+    "id": 2
+  },
+  {
+    "userName": "Diego",
+    "password": "$2b$10$3O88rRHakjnq3nBsipRrm.1uECT4CT78ur6tAh6RdCn1jI1R2r3Oe",
+    "id": 3
+  },
+  {
+    "userName": "John Doe1",
+    "password": "$2b$10$ZrCoVpqVQ8Gfpr3feFO9yuGiZYpEplJ7Y/pGcWn7uf/jFNU4iPa4C",
+    "id": 4
+  },
+  {
+    "userName": "John Doe Garcia",
+    "password": "$2b$10$r8EvuHvWNPzuzIXvY4vvaupEJn2JvvnbKkuJ4M5MYbMZ9dFd/bpli",
+    "id": 5
+  },
+  {
+    "userName": "Pepito",
+    "password": "$2b$10$MR11vNvSApQi56JeuJMK/OqOePl2Ir5Pfu0Fl9ODe3gueQ7w0RxyK",
+    "id": 6
+  }
+]
